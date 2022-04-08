@@ -1,6 +1,8 @@
+/* eslint-disable no-undef */
 import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 import '../../App.css';
+import Header from '../Header/Header';
 import apiClient from '../../Interceptor/Interceptor';
 import rightimg from '../../Icons/Path407.svg';
 import leftimg from '../../Icons/Path 627.svg';
@@ -12,6 +14,7 @@ function LogIn({ history }) {
     phone_number: '',
     password: '',
   });
+  // const [userName, setuserName] = useState('');
   const [records, setRecords] = useState([]);
   const handdleInput = (e) => {
     const InputData = e.target.name;
@@ -27,8 +30,10 @@ function LogIn({ history }) {
         `UserDetails?phone_number=eq.${userLogIn.phone_number}&password=eq.${userLogIn.password}&select=*`,
       )
       .then((response) => {
+        localStorage.setItem('userName', response.data[0].first_name);
+        // console.log("Sagar", userName);
         if (response.data.length > 0) {
-          history.push({ pathname: '/Dashboard' });
+          history.push({ pathname: '/Assets' });
         } else {
           // alert('Incorrect Phone Number or Password');
         }
@@ -42,6 +47,7 @@ function LogIn({ history }) {
       id: new Date().getTime().toString(),
     };
     setRecords([...records, newData]);
+    console.log();
   };
   return (
     <div>
@@ -97,6 +103,9 @@ function LogIn({ history }) {
                     id="password"
                   />
                 </div>
+
+                <Header fromLogin />
+
                 <div className="forgot-text">Forgot Your Password?</div>
                 <div>
                   <button className="btn" type="submit">
