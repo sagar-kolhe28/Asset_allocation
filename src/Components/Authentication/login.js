@@ -31,7 +31,9 @@ function LogIn({ history }) {
       )
       .then((response) => {
         localStorage.setItem('userName', response.data[0].first_name);
-        // console.log("Sagar", userName);
+        localStorage.setItem('phone_number', response.data[0].phone_number);
+
+        // console.log("Sagar", response.data[0]);
         if (response.data.length > 0) {
           history.push({ pathname: '/Assets' });
         } else {

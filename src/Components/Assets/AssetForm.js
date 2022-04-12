@@ -7,11 +7,14 @@ import './style.css';
 
 function AssetForm() {
   const history = useHistory();
+
   const [Asset, setAsset] = useState({
     Device_Name: '',
     Model: '',
     Serial_No: '',
     Issue_Date: '',
+    User_Name: localStorage.getItem('userName'),
+    phone_number: localStorage.getItem('phone_number'),
   });
   const [records, setRecords] = useState([]);
   const handdleInput = (event) => {
@@ -42,39 +45,39 @@ function AssetForm() {
   };
 
   return (
-    <div className="main_div">
+    <div className="main_div1">
       <form className="signup-form" action="" onSubmit={handleSubmit}>
         <div className="card-text">Want New Asset?</div>
-        <div className="login-text">Device Name </div>
+        <div className="login-text1">Device Name </div>
         <div className="username-box">
           <input
             type="text"
             placeholder="Enter Device Name"
-            className="form-control"
+            className="form-control1"
             value={Asset.Device_Name}
             onChange={handdleInput}
             name="Device_Name"
             id="Device_Name"
           />
         </div>
-        <div className="login-text">Model</div>
+        <div className="login-text1">Model</div>
         <div className="username-box">
           <input
             type="text"
             placeholder="Enter Model Name"
-            className="form-control"
+            className="form-control1"
             value={Asset.Model}
             onChange={handdleInput}
             name="Model"
             id="Model"
           />
         </div>
-        <div className="login-text">Serial Number</div>
+        <div className="login-text1">Serial Number</div>
         <div className="username-box">
           <input
             type="number"
             placeholder="Enter Serial Number"
-            className="form-control"
+            className="form-control1"
             required
             value={Asset.Serial_No}
             onChange={handdleInput}
@@ -83,11 +86,11 @@ function AssetForm() {
           />
         </div>
 
-        <div className="login-text">Issue Date</div>
+        <div className="login-text1">Issue Date</div>
         <div className="username-box">
           <input
             type="date"
-            className="form-control"
+            className="form-control1"
             required
             value={Asset.Issue_Date}
             onChange={handdleInput}
@@ -96,7 +99,7 @@ function AssetForm() {
           />
         </div>
         <div>
-          <button className="btn" type="submit">
+          <button className="btn12" type="submit">
             <p className="btn-txt"> Send Request</p>
           </button>
         </div>

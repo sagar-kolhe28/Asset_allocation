@@ -18,8 +18,16 @@ function Header({ fromLogin }) {
               <img src={userLogo} alt="oops" className="logo-6" />
             </div>
             <div className="welcome-text">Welcome </div>
-            <div className="username-text">
-              {localStorage.getItem('userName')}
+            {/* <div className="username-text">
+                            {localStorage.getItem('userName')}
+                        </div> */}
+            <div className="dropdown">
+              <button type="submit" className="dropbtn">
+                <h2>{localStorage.getItem('userName')}</h2>
+              </button>
+              <div className="dropdown-content">
+                <a href="/">Logout</a>
+              </div>
             </div>
           </div>
         </div>

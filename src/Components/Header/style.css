@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap');
+
 .header {
   display: flex;
   flex-direction: row;
@@ -20,10 +22,10 @@
   opacity: 1;
 }
 .userbox1 {
-  width: 150px;
+  width: 190px;
   height: 50px;
   padding: 10px;
-  margin-left: 130%;
+  margin-left: 110%;
   margin-top: 40px;
   padding-top: 20px;
   background: #f5f5f5 0% 0% no-repeat padding-box;
@@ -41,11 +43,53 @@
 .welcome-text {
   font-size: 16px;
   padding: 5px;
+  margin-left: 35px;
   margin-top: -60px;
-  text-align: right;
+  text-align: center;
 }
-.username-text {
+/* .username-text {
   font-size: 22px;
-  padding: 5px;
-  text-align: right;
+  text-align: center;
+} */
+.dropdown {
+  /* position: relative; */
+  /* display: inline-block; */
+  font-size: 22px;
+  /* padding: 5px; */
+  text-align: center;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f1f1f1;
+  min-width: 160px;
+  /* box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2); */
+  z-index: 1;
+}
+
+.dropdown-content a {
+  /* color: black; */
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content a:hover {
+  background: transparent linear-gradient(100deg, #057451 0%, #00a333 100%) 0%
+    0% no-repeat padding-box;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.dropbtn {
+  background: #f5f5f5 0% 0% no-repeat padding-box;
+  font: normal normal normal 14px/15px Poppins;
+  border: none;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  margin-left: 35px;
 }
