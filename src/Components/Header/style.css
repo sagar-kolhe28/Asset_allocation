@@ -25,7 +25,7 @@
   width: 190px;
   height: 50px;
   padding: 10px;
-  margin-left: 110%;
+  margin-left: 0%;
   margin-top: 40px;
   padding-top: 20px;
   background: #f5f5f5 0% 0% no-repeat padding-box;
@@ -33,18 +33,27 @@
   opacity: 1;
   border: 1px solid white;
 }
+.bell {
+  height: 35px;
+  width: 35px;
+}
+.bellbox {
+  margin-top: 55px;
+  margin-left: 850px;
+}
 .logo-6 {
   height: 52px;
   width: 52px;
+  cursor: pointer;
 }
 .userlogo {
-  margin-top: -11px;
+  margin-top: -5px;
 }
 .welcome-text {
   font-size: 16px;
   padding: 5px;
-  margin-left: 35px;
-  margin-top: -60px;
+  margin-left: 32px;
+  margin-top: -65px;
   text-align: center;
 }
 /* .username-text {

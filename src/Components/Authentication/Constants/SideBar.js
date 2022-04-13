@@ -20,7 +20,7 @@ function SideBar() {
           <img src={logo} alt="oops" className="logo-11" />
         </div>
         <div className="list1">
-          <Link to="#">
+          <Link to="/DashBoard">
             {' '}
             <div className="text2">
               {' '}
@@ -28,41 +28,41 @@ function SideBar() {
               Dashboard{' '}
             </div>
           </Link>
-          <Link to="#">
+          <Link to="/Pay">
             {' '}
             <div className="text2">
               <img src={Pay} alt="oops" className="icons-sidebar" />
               Pay
             </div>
           </Link>
-          <Link to="#">
+          <Link to="/Reimbursement">
             {' '}
             <div className="text2">
               <img src={Reimbursement} alt="oops" className="icons-sidebar" />
               Reimbursement
             </div>
           </Link>
-          <Link to="#" className="active">
+          <Link to="/Assets" className="active">
             <div className="text">
               <img src={Assets} alt="oops" className="icons-sidebar" />
               Assets
             </div>
           </Link>
-          <Link to="#">
+          <Link to="/Leaves">
             {' '}
             <div className="text2">
               <img src={Leaves} alt="oops" className="icons-sidebar" />
               Leaves
             </div>
           </Link>
-          <Link to="#">
+          <Link to="/TaxDeclaration">
             {' '}
             <div className="text2">
               <img src={TaxDeclaration} alt="oops" className="icons-sidebar" />
               Tax Declaration
             </div>
           </Link>
-          <Link to="#">
+          <Link to="/ImportantDoc">
             {' '}
             <div className="text2">
               <img
@@ -73,7 +73,7 @@ function SideBar() {
               Important Documents
             </div>
           </Link>
-          <Link to="#">
+          <Link to="/PendingDoc">
             {' '}
             <div className="text2">
               <img

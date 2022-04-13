@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import './style.css';
 import apiClient from '../../Interceptor/Interceptor';
-import SideBar from '../Authentication/Dashboard/SideBar';
+import SideBar from '../Authentication/Constants/SideBar';
 import Header from '../Header/Header';
 import AssetForm from './AssetForm';
 import AssetCard from './AssetCard';
@@ -16,9 +16,8 @@ function Assets() {
       // setLoading(true);
 
       apiClient
-        .get('Assets?select=*', posts)
+        .get(`Assets?phone_number=eq.${phoneNumber}&select=*`, posts)
         .then((response) => {
-          // console.log("hey", response);
           setPosts(response.data);
         })
         .catch((error) => {
@@ -38,7 +37,7 @@ function Assets() {
 
       <div className="temp">
         <h1>
-          <Header />
+          <Header heading="Assets" />
         </h1>
       </div>
       <div className="container-2">

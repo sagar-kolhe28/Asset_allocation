@@ -4,15 +4,19 @@ import PropTypes from 'prop-types';
 
 import './style.css';
 import userLogo from '../../Icons/Group 1678.svg';
+import bell from '../../Icons/notifications_black_24dp.svg';
 
-function Header({ fromLogin }) {
+function Header({ fromLogin, heading }) {
   return (
     <div className="header">
       {fromLogin === true ? (
         ''
       ) : (
         <div className="container1">
-          <div className="name1">Assets</div>
+          <div className="name1">{heading}</div>
+          <div className="bellbox">
+            <img src={bell} alt="oops" className="bell" />
+          </div>
           <div className="userbox1">
             <div className="userlogo">
               <img src={userLogo} alt="oops" className="logo-6" />
@@ -37,5 +41,8 @@ function Header({ fromLogin }) {
 }
 Header.propTypes = {
   fromLogin: PropTypes.string.isRequired,
+};
+Header.propTypes = {
+  heading: PropTypes.string.isRequired,
 };
 export default Header;

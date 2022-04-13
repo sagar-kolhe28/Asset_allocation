@@ -35,7 +35,7 @@ function LogIn({ history }) {
 
         // console.log("Sagar", response.data[0]);
         if (response.data.length > 0) {
-          history.push({ pathname: '/Assets' });
+          history.push({ pathname: '/DashBoard' });
         } else {
           // alert('Incorrect Phone Number or Password');
         }

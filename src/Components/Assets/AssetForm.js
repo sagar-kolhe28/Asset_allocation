@@ -1,12 +1,12 @@
 /* eslint-disable no-undef */
 import React, { useState } from 'react';
-import { useHistory } from 'react-router-dom';
+// import { useHistory } from 'react-router-dom';
 import PropTypes from 'prop-types';
 import apiClient from '../../Interceptor/Interceptor';
 import './style.css';
 
-function AssetForm() {
-  const history = useHistory();
+function AssetForm({ history }) {
+  // const history = useHistory();
 
   const [Asset, setAsset] = useState({
     Device_Name: '',
