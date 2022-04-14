@@ -1,3 +1,4 @@
+/* eslint-disable no-undef */
 /* eslint-disable jsx-a11y/anchor-is-valid */
 import React from 'react';
 import { Link } from 'react-router-dom';
@@ -20,51 +21,108 @@ function SideBar() {
           <img src={logo} alt="oops" className="logo-11" />
         </div>
         <div className="list1">
-          <Link to="/DashBoard">
+          <Link
+            to="/DashBoard"
+            className={
+              window.location.pathname === '/DashBoard' ? 'active' : ''
+            }
+          >
             {' '}
-            <div className="text2">
+            <div
+              className={
+                window.location.pathname === '/DashBoard' ? 'text' : 'text2'
+              }
+            >
               {' '}
               <img src={Dashboard} alt="oops" className="icons-sidebar" />{' '}
               Dashboard{' '}
             </div>
           </Link>
-          <Link to="/Pay">
+          <Link
+            to="/Pay"
+            className={window.location.pathname === '/Pay' ? 'active' : ''}
+          >
             {' '}
-            <div className="text2">
+            <div
+              className={window.location.pathname === '/Pay' ? 'text' : 'text2'}
+            >
               <img src={Pay} alt="oops" className="icons-sidebar" />
               Pay
             </div>
           </Link>
-          <Link to="/Reimbursement">
+          <Link
+            to="/Reimbursement"
+            className={
+              window.location.pathname === '/Reimbursement' ? 'active' : ''
+            }
+          >
             {' '}
-            <div className="text2">
+            <div
+              className={
+                window.location.pathname === '/Reimbursement' ? 'text' : 'text2'
+              }
+            >
               <img src={Reimbursement} alt="oops" className="icons-sidebar" />
               Reimbursement
             </div>
           </Link>
-          <Link to="/Assets" className="active">
-            <div className="text">
+          <Link
+            to="/Assets"
+            className={window.location.pathname === '/Assets' ? 'active' : ''}
+          >
+            <div
+              className={
+                window.location.pathname === '/Assets' ? 'text' : 'text2'
+              }
+            >
               <img src={Assets} alt="oops" className="icons-sidebar" />
               Assets
             </div>
           </Link>
-          <Link to="/Leaves">
+          <Link
+            to="/Leaves"
+            className={window.location.pathname === '/Leaves' ? 'active' : ''}
+          >
             {' '}
-            <div className="text2">
+            <div
+              className={
+                window.location.pathname === '/Leaves' ? 'text' : 'text2'
+              }
+            >
               <img src={Leaves} alt="oops" className="icons-sidebar" />
               Leaves
             </div>
           </Link>
-          <Link to="/TaxDeclaration">
+          <Link
+            to="/TaxDeclaration"
+            className={
+              window.location.pathname === '/TaxDeclaration' ? 'active' : ''
+            }
+          >
             {' '}
-            <div className="text2">
+            <div
+              className={
+                window.location.pathname === '/TaxDeclaration'
+                  ? 'text'
+                  : 'text2'
+              }
+            >
               <img src={TaxDeclaration} alt="oops" className="icons-sidebar" />
               Tax Declaration
             </div>
           </Link>
-          <Link to="/ImportantDoc">
+          <Link
+            to="/ImportantDoc"
+            className={
+              window.location.pathname === '/ImportantDoc' ? 'active' : ''
+            }
+          >
             {' '}
-            <div className="text2">
+            <div
+              className={
+                window.location.pathname === '/ImportantDoc' ? 'text' : 'text2'
+              }
+            >
               <img
                 src={ImportantDocuments}
                 alt="oops"
@@ -73,9 +131,18 @@ function SideBar() {
               Important Documents
             </div>
           </Link>
-          <Link to="/PendingDoc">
+          <Link
+            to="/PendingDoc"
+            className={
+              window.location.pathname === '/PendingDoc' ? 'active' : ''
+            }
+          >
             {' '}
-            <div className="text2">
+            <div
+              className={
+                window.location.pathname === '/PendingDoc' ? 'text' : 'text2'
+              }
+            >
               <img
                 src={PendingDocuments}
                 alt="oops"

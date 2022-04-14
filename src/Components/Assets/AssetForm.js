@@ -1,11 +1,10 @@
 /* eslint-disable no-undef */
 import React, { useState } from 'react';
-// import { useHistory } from 'react-router-dom';
 import PropTypes from 'prop-types';
 import apiClient from '../../Interceptor/Interceptor';
 import './style.css';
 
-function AssetForm({ history }) {
+function AssetForm({ history, getAssetList }) {
   // const history = useHistory();
 
   const [Asset, setAsset] = useState({
@@ -31,6 +30,8 @@ function AssetForm({ history }) {
       .then((response) => {
         console.log(response);
         alert('Asset Added Sucessfully');
+        getAssetList();
+
         history.push({ pathname: '/Assets' });
       })
       .catch((error) => {
@@ -109,6 +110,9 @@ function AssetForm({ history }) {
 }
 AssetForm.propTypes = {
   history: PropTypes.shape({ push: PropTypes.func.isRequired }).isRequired,
+};
+AssetForm.propTypes = {
+  getAssetList: PropTypes.shape({ push: PropTypes.func.isRequired }).isRequired,
 };
 
 export default AssetForm;

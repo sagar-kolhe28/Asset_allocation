@@ -55,6 +55,17 @@
   width: 380px;
   height: 550px;
 }
+.main_div11 {
+  margin-top: -792px;
+  margin-left: 650px;
+  background: #ffffff 0% 0% no-repeat padding-box;
+  box-shadow: 0px 5px 12px #2424241a;
+  border: 1px solid #ececec;
+  border-radius: 6px;
+  opacity: 1;
+  width: 380px;
+  height: 310px;
+}
 .card-text {
   font-size: 20px;
   font: normal normal medium 16px/32px Poppins;

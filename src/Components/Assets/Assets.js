@@ -11,20 +11,19 @@ function Assets() {
   const phoneNumber = localStorage.getItem('phone_number');
   const [posts, setPosts] = useState([]);
   // const history = useHistory();
+  const fetchPosts = async () => {
+    // setLoading(true);
+
+    apiClient
+      .get(`Assets?phone_number=eq.${phoneNumber}&select=*`, posts)
+      .then((response) => {
+        setPosts(response.data);
+      })
+      .catch((error) => {
+        console.log('error during loading dashboard', error);
+      });
+  };
   useEffect(() => {
-    const fetchPosts = async () => {
-      // setLoading(true);
-
-      apiClient
-        .get(`Assets?phone_number=eq.${phoneNumber}&select=*`, posts)
-        .then((response) => {
-          setPosts(response.data);
-        })
-        .catch((error) => {
-          console.log('error during loading dashboard', error);
-        });
-    };
-
     fetchPosts();
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
@@ -50,6 +49,7 @@ function Assets() {
                 serialnumber={post.Serial_No}
                 issuedate={post.Issue_Date}
                 phoneNumber={phoneNumber}
+                getAssetList={fetchPosts}
               />
             </div>
           ))}
@@ -57,7 +57,7 @@ function Assets() {
 
         <div>
           <div className="form-info">
-            <AssetForm />
+            <AssetForm getAssetList={fetchPosts} />
           </div>
         </div>
       </div>
